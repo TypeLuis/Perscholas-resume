@@ -74,7 +74,7 @@ h2 {
 }
 
 
-.bottom_container{
+.bottom_container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,7 +116,7 @@ h2 {
 }
 
 
-.right_container{
+.right_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,7 +126,7 @@ h2 {
     /* width: 200px; */
 }
 
-.right{
+.right {
     width: 200px;
 }
 
@@ -135,11 +135,13 @@ h2 {
     font-size: 15px;
     position: relative;
     margin-top: 2em;
-    &::before{
+
+    &::before {
         content: attr(data-value);
         position: absolute;
         bottom: 100%;
     }
+
     & span {
         display: block;
         height: 100%;
@@ -162,17 +164,20 @@ h2 {
 }
 
 
-.right:nth-child(2){
+.right:nth-child(2) {
     display: flex;
     flex-direction: column;
-    & h4{
+
+    & h4 {
         text-align: start;
         margin-bottom: 1em;
     }
-    & span{
+
+    & span {
         position: relative;
         padding-left: 20px;
-        &::before{
+
+        &::before {
             content: "";
             position: absolute;
             left: 5px;
@@ -186,17 +191,19 @@ h2 {
 }
 
 
-.right:nth-child(3){
+.right:nth-child(3) {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    & div{
+
+    & div {
         height: 25x;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-    & span{
+
+    & span {
         height: 25px;
         width: 25px;
         display: block;
@@ -205,7 +212,22 @@ h2 {
         background-color: var(--bgColor);
 
     }
-    & .none{
+
+    & .none {
         background-color: #e5e5e5 !important;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    body{
+        margin: 2em;
+    }
+    .bottom_container{
+       flex-direction: column; 
+    }
+
+    .right{
+        width: 80vw;
+        align-items: center;
     }
 }
