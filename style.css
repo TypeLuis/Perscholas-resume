@@ -1,8 +1,8 @@
-/* Page + card */
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
     background: #e5e5e5;
+    /* background: #272a2c; */
 }
 
 * {
@@ -182,5 +182,30 @@ h2 {
             display: inline-block;
             background-color: var(--bgColor);
         }
+    }
+}
+
+
+.right:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    & div{
+        height: 25x;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    & span{
+        height: 25px;
+        width: 25px;
+        display: block;
+        border-radius: 50%;
+        border: 1px solid black;
+        background-color: var(--bgColor);
+
+    }
+    & .none{
+        background-color: #e5e5e5 !important;
     }
 }
