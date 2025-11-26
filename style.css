@@ -18,6 +18,9 @@ body {
     flex-direction: column;
 }
 
+
+
+/* TOP CONTAINER */
 .top_container {
     display: flex;
     flex-wrap: wrap;
@@ -50,8 +53,6 @@ h2 {
 .top:nth-child(2) span {
     display: flex;
     justify-content: flex-start;
-    /* align-items: center;
-    text-align: center; */
     gap: 1em;
 }
 
@@ -62,18 +63,18 @@ h2 {
 .top:nth-child(1),
 .top:nth-child(2) {
     flex: 1;
-    /* min-width: 300px;      */
 }
 
 .top:nth-child(3) {
     flex-basis: 80%;
     margin-top: 20px;
-    /* justify-self: flex-start; */
     text-align: start;
 
 }
 
 
+
+/* BOTTOM CONTAINER */
 .bottom_container {
     margin-top: 5em;
     display: flex;
@@ -81,6 +82,12 @@ h2 {
     justify-content: center;
     gap: 2em;
 }
+
+
+
+/* 
+    BOTTOM LEFT CONTAINER
+*/
 
 .expierence {
     display: flex;
@@ -143,14 +150,20 @@ h2 {
     }
 }
 
+
+
+
+
+/* 
+    BOTTOM RIGHT CONTAINER
+*/
+
 .right_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2em;
-    /* min-width: 300px; */
-    /* width: 200px; */
 }
 
 .right {
