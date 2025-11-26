@@ -270,4 +270,12 @@ h2 {
         width: 80vw;
         align-items: center;
     }
+
+    .right:nth-child(2), .right:nth-child(3){
+        align-items: start;
+    }
+
+    .right:nth-child(3) div{
+        gap: .5em;
+    }
 }
