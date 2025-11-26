@@ -5,11 +5,11 @@ body {
     background: #e5e5e5;
 }
 
-*{
+* {
     margin: 0;
 }
 
-.container{
+.container {
     margin: 0 auto;
     max-width: 900px;
     display: flex;
@@ -18,7 +18,7 @@ body {
     flex-direction: column;
 }
 
-.top_container{
+.top_container {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -26,80 +26,122 @@ body {
     padding: 2em 0;
 }
 
-img{
+img {
     height: 150px;
     width: 150px;
 }
 
-h2{
+h2 {
     font-size: xx-large;
     margin-bottom: 0;
-    
+
 }
 
-#occupation p{
+#occupation p {
     margin: 0;
     color: #78c0ec;
 }
 
-.top:nth-child(1){
+.top:nth-child(1) {
     display: flex;
     gap: 2em;
 }
 
-.top:nth-child(2) span{
+.top:nth-child(2) span {
     display: flex;
     justify-content: flex-start;
     /* align-items: center;
     text-align: center; */
     gap: 1em;
 }
-.top:nth-child(2) p{
+
+.top:nth-child(2) p {
     margin: 0;
 }
 
 .top:nth-child(1),
 .top:nth-child(2) {
-    flex: 1;         
+    flex: 1;
     /* min-width: 300px;      */
 }
 
 .top:nth-child(3) {
-    flex-basis: 80%; 
+    flex-basis: 80%;
     margin-top: 20px;
     /* justify-self: flex-start; */
     text-align: start;
 
 }
 
-.expierence{
+
+.bottom_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expierence {
     display: flex;
     flex-wrap: wrap;
     /* gap: 2em; */
     margin: 2em 0;
-    & div{
+
+    & div {
         display: flex;
         flex-direction: column;
     }
 
-    & div span{
+    & div span {
         margin-top: .5em;
     }
 
-    & span:nth-last-child(2){
+    & span:nth-last-child(2) {
         /* margin: 0 auto; */
         text-align: right;
     }
 
-    & div, & span:nth-last-child(2){
-        flex: 1;        
+    & div,
+    & span:nth-last-child(2) {
+        flex: 1;
     }
 
-    & p{
-        flex-basis: 100%; 
+    & p {
+        flex-basis: 100%;
         margin-top: 20px;
         /* justify-self: flex-start; */
         text-align: start;
         /* color: red; */
+    }
+}
+
+
+.meter {
+    height: 20px;
+    font-size: 15px;
+    position: relative;
+    margin-top: 2em;
+    &::before{
+        content: attr(data-value);
+        position: absolute;
+        bottom: 100%;
+    }
+    & span {
+        display: block;
+        height: 100%;
+    }
+}
+
+.progress {
+    text-align: right;
+    animation: progressBar 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
     }
 }
